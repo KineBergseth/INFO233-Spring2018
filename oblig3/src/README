@@ -1,0 +1,26 @@
+Reﬂekter over designmalene du har brukt i oppgaven.
+
+Hvilken designmaler har du brukt? Hvordan har du brukt dem?
+Hvorfor har du brukt dem? Hvordan er de nyttig?
+Er det andre designmaler du kunne ha brukt som kunne gjort utviklingen enklere?
+Det er viktig at du svarer på alle disse spørsmålene.
+
+
+Jeg har opprettet 3 filer for hver tabell i databasen, samt 2 filer for de andre sidene (charts, vise faktura). Det er en fxml fil for grafisk grensesnitt,
+en controller klasse som utfører funksjonene for siden (som å legge til, oppdatere (og evt slette) rader) og en data klasse  som har forskjellige funksjoner for å få addet og hentet ut info enkelt i kontrolleren.
+Jeg har også en util hvor jeg har skapt en instanse som blir hentet fra de andre klassene for å enkelt koble seg til databasen.
+
+Jeg benyttet dette oppsettet ettersom det var enkelt og oversiktlig, og enkelt å forstå. Det er enkelt å hente ut data i tabeller, og ved å bruke fxml filer slipper jeg å opprette visuelle objekter i koden.
+
+
+
+Det er en god del andre maler som kan være nyttige til denne obligen som jeg syns i hvert fall burde nevnes.
+
+
+
+
+Ettersom add/update osv er nesten identiske kunne man kanskje benyttet en template pattern hvor en abstrakt klasse definerer hvordan templatene executes metoder.
+
+Iterator pattern kunne blitt brukt slik at jeg kunne fått tilgang til elementer fra de ulike collection enklelt. Dette kan være nyttig siden det er mye repeterende konsepter.
+
+JEg kkunne også muligens brukt en front controller pattern hvor jeg hadde laget en samlet metode for å behandle add/update/load fra alle de forskjellige tables istedenfor å gjøre nesten identiske operasjoner på alle de forksjellige sidene.

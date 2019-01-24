@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.categoryController">
+    <VBox prefWidth="1500.0">
+        <children>
+            <SplitPane dividerPositions="0.31533646322378717" focusTraversable="true" VBox.vgrow="ALWAYS">
+                <items>
+                    <AnchorPane prefWidth="308.0">
+                        <children>
+                            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" style="&#10;" text="Category" textAlignment="CENTER">
+                                <font>
+                                    <Font size="18.0" fx:id="x1" />
+                                </font>
+                                <textFill>
+                                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                                </textFill>
+                            </Label>
+                            <VBox layoutX="50.0" layoutY="50.0">
+                                <children>
+                                    <Label prefHeight="30.0" text="Add Category Details" />
+                                    <TextField fx:id="category_id" prefHeight="30.0" promptText="Category Id" />
+                                    <TextField fx:id="category_name" prefHeight="30.0" promptText="Category Name" />
+                                    <Button mnemonicParsing="false" onAction="#addCategory" prefHeight="30.0" prefWidth="350.0" text="Add Category" />
+                                    <Button mnemonicParsing="false" onAction="#clearFieldsAdd" prefHeight="30.0" prefWidth="350.0" text="Clear Fields" />
+                                </children>
+                            </VBox>
+                            <VBox layoutX="50.0" layoutY="300.0">
+                                <children>
+                                    <Label prefHeight="30.0" text="Update Category Details" />
+                                    <TextField fx:id="category_idUpdate" prefHeight="30.0" promptText="Category Id" />
+                                    <TextField fx:id="category_nameUpdate" prefHeight="30.0" promptText="Category Name" />
+                                    <Button mnemonicParsing="false" onAction="#UpdateCategory" prefHeight="30.0" prefWidth="350.0" text="Update Category" />
+                                    <Button mnemonicParsing="false" onAction="#clearFieldsUpdate" prefHeight="30.0" prefWidth="350.0" text="Clear Fields" />
+                                </children>
+                            </VBox>
+                            <TextArea fx:id="resultArea" layoutX="10.0" layoutY="650.0" prefHeight="100.0" prefWidth="450.0" />
+                            <Button layoutX="10.0" layoutY="600.0" mnemonicParsing="false" onAction="#loadCategoryData" prefHeight="50.0" prefWidth="450.0" text="Load Data" />
+                        </children>
+                    </AnchorPane>
+                    <ScrollPane prefHeight="551.0" prefWidth="627.0">
+                        <content>
+                            <TableView fx:id="categorytable" prefHeight="915.0" prefWidth="1000.0">
+                                <columns>
+                                    <TableColumn fx:id="category_idcolumn" prefWidth="75.0" text="Category Id" />
+                                    <TableColumn fx:id="category_namecolumn" prefWidth="172.0" text="Category Name" />
+                                </columns>
+                            </TableView>
+                        </content>
+                    </ScrollPane>
+                </items>
+            </SplitPane>
+        </children>
+    </VBox>
+</AnchorPane>

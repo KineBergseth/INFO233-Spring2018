@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<MenuBar xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="masterController">
+    <menus>
+        <Menu mnemonicParsing="false" text="Tables">
+            <items>
+                <MenuItem fx:id="displayAddress" mnemonicParsing="false" onAction="#switchToAddress" text="Address" />
+                <MenuItem fx:id="displayCategory" mnemonicParsing="false" onAction="#switchToCategory" text="Category" />
+                <MenuItem fx:id="displayCustomer" mnemonicParsing="false" onAction="#switchToCustomer" text="Customer" />
+                <MenuItem fx:id="displayInvoice" mnemonicParsing="false" onAction="#switchToInvoice" text="Invoice" />
+                <MenuItem fx:id="displayProduct" mnemonicParsing="false" onAction="#switchToProduct" text="Product" />
+            </items></Menu>
+        <Menu mnemonicParsing="false" text="Stuff">
+            <items>
+                <MenuItem fx:id="displayInvoiceItems" mnemonicParsing="false" onAction="#switchToShowInvoiceItems" text="Add invoice items" />
+                <MenuItem fx:id="displayShowInvoice" mnemonicParsing="false" onAction="#switchToShowInvoice" text="Show invoice" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="displayChart1" mnemonicParsing="false" onAction="#switchToChart1" text="chart1" />
+                <MenuItem fx:id="displayChart2" mnemonicParsing="false" onAction="#switchToChart2" text="chart2" />
+                <MenuItem fx:id="displayChart3" mnemonicParsing="false" onAction="#switchToChart3" text="chart3" />
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>
